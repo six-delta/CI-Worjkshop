@@ -1,3 +1,3 @@
 # Workshop de CI para 6Delta
-Conflicto
+conflicto online
 En este workshop aprenderemos a hacer CI
