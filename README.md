@@ -1,3 +1,3 @@
-Hola inmundo !!!
+# Workshop de CI para 6Delta
 
-Aquío en el WS de CI
+En este workshop aprenderemos a hacer CI
