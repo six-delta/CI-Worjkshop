@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 
 
 public class AlfaStringCalculatorTest{
-	
+
 	@Test
 	public void testOneValue(){
 		AlfaStringCalculator m = new AlfaStringCalculator();
@@ -23,21 +23,21 @@ public class AlfaStringCalculatorTest{
 		int result = m.add("1,2");
 		assertEquals(3,result);
 	}
-	
+
 	@Test
-	public void testThreeValue(){
+	public void testSumAnyValiuesInString(){
 		AlfaStringCalculator m = new AlfaStringCalculator();
 		int result = m.add("1,2,4,55,464,3");
 		assertEquals(529,result);
 	}
-	
+
 	@Test
-	public void testFourValue(){
+	public void testASeparatorAsBreakLineInTheString(){
 		AlfaStringCalculator m = new AlfaStringCalculator();
 		int result = m.add("1\n2,4,55,464,3");
 		assertEquals(529,result);
 	}
-	
+
 	@Test
 	public void testFiveValue(){
 		AlfaStringCalculator m = new AlfaStringCalculator();
