@@ -7,32 +7,38 @@ import static org.junit.Assert.assertEquals;
 public class EpsilonStringCalculatorTest {
 
     @Test
-    public void firstTest(){
+    public void oneNumberAddition(){
         EpsilonStringCalculator esc = new EpsilonStringCalculator();
         assertEquals( 1, esc.add("1"));
     }
 
 	@Test
-    public void secondTest(){
+    public void twoNumberAddition(){
         EpsilonStringCalculator esc = new EpsilonStringCalculator();
         assertEquals( 3, esc.add("1,2"));
     }
 
     @Test
-    public void Test3(){
+    public void multipleNumberAddition(){
+        EpsilonStringCalculator esc = new EpsilonStringCalculator();
+        assertEquals( 435, esc.add("10,5,20,100,300"));
+    }
+
+    @Test
+    public void linebreakDelimiter(){
         EpsilonStringCalculator esc = new EpsilonStringCalculator();
         assertEquals( 435, esc.add("10,5,20\n100\n300"));
     }
 
     
     @Test
-    public void empty(){
+    public void emptyString(){
         EpsilonStringCalculator esc = new EpsilonStringCalculator();
         assertEquals( 0, esc.add(""));
     }
 
     @Test
-    public void moreDelims(){
+    public void patameterDelimiter(){
         EpsilonStringCalculator esc = new EpsilonStringCalculator();
         assertEquals( 7, esc.add("//;\n1;2;4"));
     }
