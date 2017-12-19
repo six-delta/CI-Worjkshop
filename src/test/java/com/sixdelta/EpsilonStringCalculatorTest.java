@@ -9,6 +9,6 @@ public class EpsilonStringCalculatorTest {
     @Test
     public void firstTest(){
         EpsilonStringCalculator esc = new EpsilonStringCalculator();
-        assertEquals( 1, esc.add("1"); );
+        assertEquals( 1, esc.add("1"));
     }
 }
