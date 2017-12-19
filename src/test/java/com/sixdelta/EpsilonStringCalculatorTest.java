@@ -43,10 +43,10 @@ public class EpsilonStringCalculatorTest {
         assertEquals( 7, esc.add("//;\n1;2;4"));
     }
 
-    @Test(expected = RuntimeException.class)
-    public void negativeValues(){
-        EpsilonStringCalculator esc = new EpsilonStringCalculator();
-        assertEquals( -1, esc.add("1,2,-4"));
-    }
+    //@Test(expected = RuntimeException.class)
+    //public void negativeValues(){
+    //    EpsilonStringCalculator esc = new EpsilonStringCalculator();
+    //    assertEquals( -1, esc.add("1,2,-4"));
+    //}
 
 }

@@ -13,7 +13,7 @@ public class EpsilonStringCalculator {
             delim = extractTheDelimiterFromTheString(theStringToAdd);
             theStringToAdd = removingTheSeparatorIndicatorFromTheString(theStringToAdd);
         }
-
+        
     	return theSumOfNumbersInTheStringWithDelimiter(theStringToAdd, delim);
     }
 
