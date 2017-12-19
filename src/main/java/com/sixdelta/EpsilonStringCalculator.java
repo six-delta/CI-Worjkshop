@@ -14,9 +14,7 @@ public class EpsilonStringCalculator {
             theStringToAdd = removingTheSeparatorIndicatorFromTheString(theStringToAdd);
         }
 
-    	return  Stream.of(theStringToAdd.split(delim))
-                      .mapToInt(Integer::parseInt)
-                      .sum();
+    	return theSumOfNumbersInTheStringWithDelimiter(theStringToAdd, delim);
     }
 
     private boolean theStringContainsAnOptionalDelimiter(String theString){
@@ -29,5 +27,11 @@ public class EpsilonStringCalculator {
 
     private String removingTheSeparatorIndicatorFromTheString(String theString){
       return theString.substring(theString.indexOf("\n")+1);
+    }
+
+    private int theSumOfNumbersInTheStringWithDelimiter(String theString, String delim){
+      return Stream.of(theString.split(delim))
+        .mapToInt(Integer::parseInt)
+        .sum();
     }
 }
