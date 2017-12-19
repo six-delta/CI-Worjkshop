@@ -20,4 +20,11 @@ public class AlfaStringCalculatorTest{
 
 	}
 
+	@Test
+	public void testTwoValue(){
+		AlfaStringCalculator m = new AlfaStringCalculator();
+		int result = m.add("1,2");
+		assertEquals(3,result);
+	}
+
 }
