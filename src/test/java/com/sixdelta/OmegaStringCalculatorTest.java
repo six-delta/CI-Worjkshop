@@ -32,4 +32,11 @@ public class OmegaStringCalculatorTest {
   	int result = stringCalculator.add("1\n2,3\n4,5");
   	assertEquals( 15, result);
   }
+
+  @Test
+  public void testDifferentDelimiters(){
+  	OmegaStringCalculator stringCalculator = new OmegaStringCalculator();
+  	int result = stringCalculator.add("//;\n1;2");
+  	assertEquals( 3, result);
+  }
 }
