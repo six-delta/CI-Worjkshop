@@ -18,4 +18,11 @@ public class OmegaStringCalculatorTest {
   	int result = stringCalculator.add("1,2");
   	assertEquals( 3, result);
   }
+
+  @Test
+  public void testMoreValues(){
+  	OmegaStringCalculator stringCalculator = new OmegaStringCalculator();
+  	int result = stringCalculator.add("1,2,3,4,5");
+  	assertEquals( 15, result);
+  }
 }
