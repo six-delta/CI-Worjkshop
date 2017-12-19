@@ -11,4 +11,5 @@ public class OmegaStringCalculatorTest {
     int result = stringCalculator.add("1");
     assertEquals( 1, result );
   }
+  // Another test
 }
