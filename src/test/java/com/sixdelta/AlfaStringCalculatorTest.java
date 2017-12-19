@@ -50,7 +50,7 @@ public class AlfaStringCalculatorTest{
 	public void testSixValue(){
 		AlfaStringCalculator m = new AlfaStringCalculator();
 		int result = m.add("-1\n2//;\n4,55,464,-3");
-		assertEquals(525,result);
+		assertEquals(521,result);
 	}
 	
 }
