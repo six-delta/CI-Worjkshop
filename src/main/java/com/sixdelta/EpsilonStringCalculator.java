@@ -7,7 +7,7 @@ public class EpsilonStringCalculator {
 
         if(s.isEmpty()) return 0;
 
-    	return  Stream.of(s.split(",|\\n"))
+    	return  Stream.of(s.split(",|\\n|//|;"))
                       .mapToInt(Integer::parseInt)
                       .sum();
     }
