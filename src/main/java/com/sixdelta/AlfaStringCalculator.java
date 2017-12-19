@@ -3,14 +3,14 @@ package com.sixdelta;
 
 public class AlfaStringCalculator
 {
-	int add(String n){
-		String[] val = n.replaceAll("[^\\.0-9]",",").split(",");
-		int suma=0;
-		for (int i = 0; i<val.length; i++) {
-			if(val[i] != "," && !val[i].equals("")){
-				suma+=Integer.parseInt(val[i]);
+	int add(String stringToValue){
+		String[] separatedValues = stringToValue.replaceAll("[^\\.0-9]",",").split(",");
+		int aditionResult = 0;
+		for (int i = 0; i<separatedValues.length; i++) {
+			if(separatedValues[i] != "," && !separatedValues[i].equals("")){
+				aditionResult += Integer.parseInt(separatedValues[i]);
 			}
 		}
-		return suma;//Integer.parseInt(n);
+		return aditionResult;//Integer.parseInt(n);
 	}
 }
