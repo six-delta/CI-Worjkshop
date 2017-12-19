@@ -11,5 +11,11 @@ public class OmegaStringCalculatorTest {
     int result = stringCalculator.add("1");
     assertEquals( 1, result );
   }
-  // Another test
+
+  @Test
+  public void testTwoValues(){
+  	OmegaStringCalculator stringCalculator = new OmegaStringCalculator();
+  	int result = stringCalculator.add("1,2");
+  	assertEquals( 3, result);
+  }
 }
