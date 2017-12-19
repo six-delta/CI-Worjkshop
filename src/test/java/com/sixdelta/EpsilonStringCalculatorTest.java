@@ -24,4 +24,10 @@ public class EpsilonStringCalculatorTest {
         assertEquals( 435, esc.add("10,5,20\n100\n300"));
     }
 
+    @Test
+    public void empty(){
+        EpsilonStringCalculator esc = new EpsilonStringCalculator();
+        assertEquals( 0, esc.add(""));
+    }
+
 }
