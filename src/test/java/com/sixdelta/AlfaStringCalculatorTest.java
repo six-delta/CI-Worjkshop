@@ -26,5 +26,19 @@ public class AlfaStringCalculatorTest{
 		int result = m.add("1,2");
 		assertEquals(3,result);
 	}
+	
+	@Test
+	public void testThreeValue(){
+		AlfaStringCalculator m = new AlfaStringCalculator();
+		int result = m.add("1,2,4,55,464,3");
+		assertEquals(529,result);
+	}
+	
+	@Test
+	public void testFourValue(){
+		AlfaStringCalculator m = new AlfaStringCalculator();
+		int result = m.add("1\n2,4,55,464,3");
+		assertEquals(529,result);
+	}
 
 }
