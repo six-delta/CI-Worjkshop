@@ -3,19 +3,31 @@ package com.sixdelta;
 import java.util.stream.Stream;
 
 public class EpsilonStringCalculator {
-    public int add(String stringToAdd){
+    public int add(String theStringToAdd){
 
-        if(stringToAdd.isEmpty()) return 0;
+        if(theStringToAdd.isEmpty()) return 0;
 
         String delim = ",|\\n";
 
-        if(stringToAdd.startsWith("//")) {
-            delim = stringToAdd.substring(2,stringToAdd.indexOf("\n") );
-            stringToAdd = stringToAdd.substring(stringToAdd.indexOf("\n")+1);
+        if(theStringContainsAnOptionalDelimiter(theStringToAdd)) {
+            delim = extractTheDelimiterFromTheString(theStringToAdd);
+            theStringToAdd = removingTheSeparatorIndicatorFromTheString(theStringToAdd);
         }
 
-    	return  Stream.of(stringToAdd.split(delim))
+    	return  Stream.of(theStringToAdd.split(delim))
                       .mapToInt(Integer::parseInt)
                       .sum();
+    }
+
+    private boolean theStringContainsAnOptionalDelimiter(String theString){
+      return theString.startsWith("//");
+    }
+
+    private String extractTheDelimiterFromTheString(String theString){
+      return theString.substring(2,theString.indexOf("\n") );
+    }
+
+    private String removingTheSeparatorIndicatorFromTheString(String theString){
+      return theString.substring(theString.indexOf("\n")+1);
     }
 }
