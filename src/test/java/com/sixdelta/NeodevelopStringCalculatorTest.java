@@ -11,5 +11,8 @@ public class NeodevelopStringCalculatorTest {
     int result = sc.add("1");
     assertEquals( 1, result );
   }
+
+  @Test
+  public void testTwoValues(){}
 }
 
