@@ -10,11 +10,8 @@ import static org.junit.Assert.*;
 public class AlfaStringCalculatorTest{
 	
 	@Test
-
 	public void testOneValue(){
-		
 		AlfaStringCalculator m = new AlfaStringCalculator();
-	
 		int result = m.add("1");
 		assertEquals(1,result);
 
@@ -38,6 +35,13 @@ public class AlfaStringCalculatorTest{
 	public void testFourValue(){
 		AlfaStringCalculator m = new AlfaStringCalculator();
 		int result = m.add("1\n2,4,55,464,3");
+		assertEquals(529,result);
+	}
+	
+	@Test
+	public void testFiveValue(){
+		AlfaStringCalculator m = new AlfaStringCalculator();
+		int result = m.add("1\n2'4@55-464&3");
 		assertEquals(529,result);
 	}
 
