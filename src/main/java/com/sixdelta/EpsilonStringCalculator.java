@@ -3,9 +3,10 @@ package com.sixdelta;
 import java.util.stream.Stream;
 
 public class EpsilonStringCalculator {
-    public int add(String theStringToAdd){
+    public int add(String theStringToAdd) throws RuntimeException{
 
         if(theStringToAdd.isEmpty()) return 0;
+        if(theStringContainsNegativeValues(theStringToAdd)) throw new RuntimeException();
 
         String delim = ",|\\n";
 
@@ -33,5 +34,9 @@ public class EpsilonStringCalculator {
       return Stream.of(theString.split(delim))
         .mapToInt(Integer::parseInt)
         .sum();
+    }
+
+    private boolean theStringContainsNegativeValues(String theString){
+        return theString.contains("-");
     }
 }
