@@ -30,4 +30,10 @@ public class EpsilonStringCalculatorTest {
         assertEquals( 0, esc.add(""));
     }
 
+    @Test
+    public void moreDelims(){
+        EpsilonStringCalculator esc = new EpsilonStringCalculator();
+        assertEquals( 3, esc.add("//;\n1;2"));
+    }
+
 }
