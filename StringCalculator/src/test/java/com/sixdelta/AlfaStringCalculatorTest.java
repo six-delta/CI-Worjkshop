@@ -41,8 +41,16 @@ public class AlfaStringCalculatorTest{
 	@Test
 	public void testFiveValue(){
 		AlfaStringCalculator m = new AlfaStringCalculator();
-		int result = m.add("1\n2'4@55-464&3");
+		int result = m.add("1\n2//;\n4,55,464,3");
 		assertEquals(529,result);
 	}
-
+	
+		
+	@Test
+	public void testSixValue(){
+		AlfaStringCalculator m = new AlfaStringCalculator();
+		int result = m.add("-1\n2//;\n4,55,464,-3");
+		assertEquals(521,result);
+	}
+	
 }
