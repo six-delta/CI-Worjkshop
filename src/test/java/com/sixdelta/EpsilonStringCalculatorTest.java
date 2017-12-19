@@ -17,4 +17,11 @@ public class EpsilonStringCalculatorTest {
         EpsilonStringCalculator esc = new EpsilonStringCalculator();
         assertEquals( 3, esc.add("1,2"));
     }
+
+    @Test
+    public void Test3(){
+        EpsilonStringCalculator esc = new EpsilonStringCalculator();
+        assertEquals( 435, esc.add("10,5,20\n100\n300"));
+    }
+
 }
