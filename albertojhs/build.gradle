@@ -50,8 +50,11 @@ task deploy{
 	doLast{
 		ssh.run{
 			session(remotes.webServer){
-				put from: "${project.projectDir.path}/build/libs/albertojhs-0.0.1-SNAPSHOT.jar",into:"/home/ec2-user/"
-				execute 'echo "Done"'
+				execute 'kill $(cat ./pid_albertoprocess.file)'
+			      	execute "rm /home/ec2-user/albertojhs-0.0.1-SNAPSHOT.jar"
+			        put from: "${project.projectDir.path}/build/libs/albertojhs-0.0.1-SNAPSHOT.jar",into:"/home/ec2-user/"
+			        execute 'nohup ./albertoprocess_deploy.sh > foo.out 2> foo.err < /dev/null &'
+			        execute 'echo "Deploy conseguido"'
 			}
 		}
 	}
