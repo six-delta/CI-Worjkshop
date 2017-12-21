@@ -46,7 +46,7 @@ task deploy {
   doLast {
     ssh.run {
       session(remotes.webServer) {
-      	execute 'kill $(cat ./pid_onahump.file)'
+	    	execute 'kill $(cat ./pid_onahump.file)'
       	execute "rm /home/ec2-user/onahump-0.0.1-SNAPSHOT.jar"
         put from: "${project.projectDir.path}/build/libs/onahump-0.0.1-SNAPSHOT.jar", into: "/home/ec2-user/"
         execute 'nohup ./onahump_deploy.sh > foo.out 2> foo.err < /dev/null &'
