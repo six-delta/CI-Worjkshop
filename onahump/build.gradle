@@ -51,8 +51,6 @@ task deploy {
         put from: "${project.projectDir.path}/build/libs/onahump-0.0.1-SNAPSHOT.jar", into: "/home/ec2-user/"
         execute 'nohup ./onahump_deploy.sh > foo.out 2> foo.err < /dev/null &'
         execute 'echo "Done"'
-        
-        
       }
     }
   }
