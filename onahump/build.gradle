@@ -49,7 +49,7 @@ task deploy {
   doLast {
     ssh.run {
       session(remotes.webServer) {
-        put from: "${project.projectDir.path}/build/libs/neodevelop-0.0.1-SNAPSHOT.jar", into: "/home/ec2-user/"
+        put from: "${project.projectDir.path}/build/libs/onahump-0.0.1-SNAPSHOT.jar", into: "/home/ec2-user/"
         execute 'echo "Done"'
       }
     }
