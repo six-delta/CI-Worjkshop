@@ -48,8 +48,11 @@ task deploy {
   doLast {
     ssh.run {
       session(remotes.webServer) {
+      	execute 'kill $(cat ./pid_dovahchief.file)'
+		execute "rm /home/ec2-user/DovahChief-0.0.1-SNAPSHOT.jar"
         put from: "${project.projectDir.path}/build/libs/DovahChief-0.0.1-SNAPSHOT.jar", into: "/home/ec2-user/"
-        execute 'echo "CI pepe "'
+        execute 'nohup ./neodevelop_deploy.sh > foo.out 2> foo.err < /dev/null &'
+        execute 'echo "Listo paps !! "'
       }
     }
   }
