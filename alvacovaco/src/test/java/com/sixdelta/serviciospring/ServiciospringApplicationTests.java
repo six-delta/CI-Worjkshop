@@ -1,4 +1,4 @@
-package com.sixdelta.webservices;
+package com.sixdelta.serviciospring;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class WebservicesApplicationTests {
+public class ServiciospringApplicationTests {
 
 	@Test
 	public void contextLoads() {
